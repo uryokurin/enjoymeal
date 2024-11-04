@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>食べたいものを定型文にするやつ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="inputText1" class="inputText1" placeholder="第1希望は?"></textarea>
+    <textarea id="inputText2" class="inputText2" placeholder="第2希望は?"></textarea>
+    <textarea id="inputText3" class="inputText3" placeholder="第3希望は?"></textarea>
+    <button class="format">定型文を作る!</button>
+    <textarea id="outputText" readonly></textarea>
+    <button class="copy">コピー</button>
+    <button class="reset">リセット</button>
+    <script src="popup.js"></script>
+</body>
+
+</html>
