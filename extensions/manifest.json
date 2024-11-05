@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "EnjoyMeal定型文",
+    "version": "1.0",
+    "description": "食べたいものを定型文にしてくれる拡張機能です(^^)",
+    "permissions": [
+        "activeTab",
+        "clipboardWrite",
+        "storage"
+    ],
+    "action": {
+        "js":[
+            "popup.js"
+        ],
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon.png",
+            "48": "images/icon.png",
+            "128": "images/icon.png"
+        }
+    }
+}
