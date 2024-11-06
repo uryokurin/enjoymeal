@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('inputText1').value = localStorage.getItem('saveData1') || "";
     document.getElementById('inputText2').value = localStorage.getItem('saveData2') || "";
     document.getElementById('inputText3').value = localStorage.getItem('saveData3') || "";
+    document.getElementById('other').value = localStorage.getItem('otherData') || "";
 
     document.querySelector('.format').addEventListener("click", formatinput);
     document.querySelector('.copy').addEventListener("click", copyclipboard);
@@ -13,10 +14,11 @@ function formatinput() {
     var inputText1 = document.getElementById('inputText1').value;
     var inputText2 = document.getElementById('inputText2').value;
     var inputText3 = document.getElementById('inputText3').value;
+    var other = document.getElementById('other').value;
     var formattedText1 = "①" + inputText1;
     var formattedText2 = "②" + inputText2;
     var formattedText3 = "③" + inputText3;
-    document.getElementById('outputText').value = formattedText1 + "\n" + formattedText2 + "\n" + formattedText3;
+    document.getElementById('outputText').value = formattedText1 + "\n" + formattedText2 + "\n" + formattedText3 + "\n" + other;
 }
 
 function copyclipboard() {
@@ -29,14 +31,17 @@ function clearcontent() {
     document.getElementById('inputText1').value = "";
     document.getElementById('inputText2').value = "";
     document.getElementById('inputText3').value = "";
+    document.getElementById('other').value = "";
     document.getElementById('outputText').value = "";
     localStorage.removeItem('saveData1');
     localStorage.removeItem('saveData2');
     localStorage.removeItem('saveData3');
+    localStorage.removeItem('otherData');
 }
 
 function save() {
     localStorage.setItem('saveData1', document.getElementById('inputText1').value);
     localStorage.setItem('saveData2', document.getElementById('inputText2').value);
     localStorage.setItem('saveData3', document.getElementById('inputText3').value);
+    localStorage.setItem('otherData', document.getElementById('other').value);
 }
